@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "Monitoreo de Recorridos",
+    "slug": "monitoreo-recorridos-dispositivos",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "monitoreorecorridos",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jorgegamez.monitoreorecorridos",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "La ubicación permite mostrar y registrar tus recorridos.",
+        "NSBluetoothAlwaysUsageDescription": "Bluetooth permite detectar dispositivos BLE cercanos durante un recorrido.",
+        "NSMotionUsageDescription": "Los sensores permiten identificar movimiento y cambios de orientación."
+      }
+    },
+    "android": {
+      "package": "com.jorgegamez.monitoreorecorridos",
+      "permissions": ["ACCESS_FINE_LOCATION", "ACCESS_COARSE_LOCATION", "BLUETOOTH_SCAN", "BLUETOOTH_CONNECT"],
+      "adaptiveIcon": {
+        "backgroundColor": "#E8F3F1",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "plugins": [
+      "expo-dev-client",
+      ["expo-location", { "locationWhenInUsePermission": "La ubicación permite mostrar y registrar tus recorridos." }],
+      ["react-native-ble-plx", { "isBackgroundEnabled": false, "modes": ["central"], "bluetoothAlwaysPermission": "Bluetooth permite detectar dispositivos BLE cercanos durante un recorrido." }]
+    ]
+  }
+}
