@@ -2,12 +2,6 @@
 
 Aplicación móvil creada con Expo y React Native para registrar recorridos GPS, analizar movimiento mediante sensores y detectar dispositivos Bluetooth Low Energy cercanos.
 
-## ¿Funciona con Expo Go?
-
-No completamente. GPS, mapas, acelerómetro y giroscopio sí pueden ejecutarse con módulos del SDK de Expo, pero `react-native-ble-plx` incorpora código nativo que no está incluido en Expo Go. Para cumplir el escaneo BLE se utiliza un **development build de Expo** con `expo-dev-client`.
-
-La experiencia de desarrollo sigue siendo la de Expo: Metro, recarga rápida, configuración mediante `app.json` y compilaciones con EAS. La única diferencia es que se instala el cliente personalizado en vez de abrir el proyecto en Expo Go.
-
 ## Funciones implementadas
 
 - Ubicación actual sobre mapa interactivo.
